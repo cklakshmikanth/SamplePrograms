@@ -28,7 +28,7 @@ public class LinkedListPalindrome {
         fast = head;
         slow = reverseLinkedList(slow);
         
-        while(fast != null) {
+        while(slow != null) {
             if(fast.val != slow.val) {
                 return false;
             }
