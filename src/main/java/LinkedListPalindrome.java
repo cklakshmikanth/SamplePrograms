@@ -1,4 +1,4 @@
-public class LinkedListPalidrome {
+public class LinkedListPalindrome {
     public static void main(String args[]) {
         ListNode listNode5 = new ListNode(1);
         ListNode listNode4 = new ListNode(2, listNode5);
