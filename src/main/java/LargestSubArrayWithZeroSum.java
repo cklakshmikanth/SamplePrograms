@@ -22,10 +22,12 @@ public class LargestSubArrayWithZeroSum {
             if(currentSum == 0) {
                 max = Math.max(max, i + 1);
             }
-            else if(sumIndexMap.containsKey(currentSum)) {
-                max = Math.max(max, i - sumIndexMap.get(currentSum));
-            } else {
-                sumIndexMap.put(currentSum, i);
+            else {
+                if(sumIndexMap.containsKey(currentSum)) {
+                    max = Math.max(max, i - sumIndexMap.get(currentSum));
+                } else {
+                    sumIndexMap.put(currentSum, i);
+                }
             }
         }
         return max;
