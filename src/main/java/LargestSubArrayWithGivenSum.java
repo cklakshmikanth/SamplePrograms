@@ -9,7 +9,7 @@ public class LargestSubArrayWithGivenSum {
         if(result == -1) {
             System.out.println("Did not find any sub array with given sum " + sum);
         } else {
-            System.out.println("Largest sub array size with given sum " + sum + " is " + result);
+            System.out.println("Size of largest sub array with given sum " + sum + " is " + result);
         }
     }
 
