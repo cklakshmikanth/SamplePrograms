@@ -24,13 +24,14 @@ public class LargestSubArraysWithEqualNumberofOnesAndZeros {
             
             currentSum += array[i];
 
-            if(sumIndexMap.containsKey(currentSum) && i > 0) {
-                int size = i - sumIndexMap.get(currentSum);
-                if(size > max) {
-                    max = size;
-                }
+            if(currentSum == 0) {
+                max = Math.max(max, i + 1);
             } else {
-                sumIndexMap.put(currentSum, i);
+                if(sumIndexMap.containsKey(currentSum)) {
+                    max = Math.max(max, i - sumIndexMap.get(currentSum));
+                } else {
+                    sumIndexMap.put(currentSum, i);
+                }
             }
         }
         return max;
